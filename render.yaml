@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: actualizar-precio-cafe
+    schedule: "0 */2 * * *"  # Cada 2 horas
+    env: python
+    buildCommand: ""
+    startCommand: "python scraper.py"
