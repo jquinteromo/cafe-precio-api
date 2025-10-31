@@ -1,4 +1,11 @@
 services:
+  - type: web
+    name: web
+    env: python
+    buildCommand: ""
+    # Use gunicorn in production to serve the Flask app. Bind to the PORT env var.
+    startCommand: "gunicorn app:app -b 0.0.0.0:$PORT"
+
   - type: cron
     name: actualizar-precio-cafe
     schedule: "0 */2 * * *"  # Cada 2 horas
