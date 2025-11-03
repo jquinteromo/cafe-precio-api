@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, make_response
+from flask_cors import CORS
 import json
 import os
 import logging
