@@ -2,7 +2,7 @@ name: Run scraper every 2 hours
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # cada 6 horas
+    - cron: '0 8,11,14,16,20 * * *'
   workflow_dispatch: {}
 
 permissions:
